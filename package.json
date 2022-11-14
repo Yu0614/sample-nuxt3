@@ -1,0 +1,50 @@
+{
+  "name": "sample-nuxt3",
+  "version": "1.0.0",
+  "repository": "ssh://git@github.com/Yu0614/sample-nuxt3.git",
+  "author": "Yu0614 <azu369yu@gmail.com>",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "prepare": "husky install",
+    "lint": "eslint --ext \".ts,.js,.vue\" --ignore-path .gitignore .",
+    "lint:fix": "eslint --fix --ext \".ts,.js,.vue\" --ignore-path .gitignore ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,ts,vue,html,css}": [
+      "yarn lint:fix"
+    ]
+  },
+  "dependencies": {
+    "nuxt": "3.0.0-rc.13"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^11.0.0",
+    "@nuxtjs/tailwindcss": "^6.0.0",
+    "@types/node": "18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "autoprefixer": "^10.4.12",
+    "eslint": "^8.26.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.6.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "postcss": "^8.4.18",
+    "postcss-custom-properties": "^12.1.9",
+    "prettier": "^2.7.1",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.1.0",
+    "tailwindcss": "^3.1.8"
+  }
+}

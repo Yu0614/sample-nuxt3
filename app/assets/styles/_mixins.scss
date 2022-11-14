@@ -1,0 +1,10 @@
+// mixins
+@mixin max-width-responsive($propertyName, $defaultValue, $mediaQueries: ()) {
+  #{$propertyName}: #{$defaultValue};
+
+  @each $breakpoint, $value in $mediaQueries {
+    @media (max-width: #{$breakpoint}) {
+      #{$propertyName}: #{$value};
+    }
+  }
+}

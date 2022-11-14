@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .componentBlock {
+    @apply border-zinc-700 border-solid border rounded-2xl p-4 shadow-lg bg-stone-50/100;
+  }
+
+  .textColorBlue {
+    color: $colorBlue;
+  }
+
+  .textColorWhite {
+    color: $colorWhite;
+  }
+
+  .header {
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    background-color: $colorWhite;
+    opacity: 0.95;
+    @apply shadow-md
+  }
+
+  .bodyContainer {
+    background-color: $colorGray;
+    padding: 3rem 0.25rem 0 0.25rem; /* 12px */
+    height: 100%;
+  }
+
+  .body {
+    @include max-width-responsive(
+      margin,
+      0 6rem,
+      (
+        $pad: 0 2rem,
+        $sp: 0 0.5rem
+      )
+    );
+  }
+
+  .contentContainer {
+    --tw-bg-opacity: 1;
+    background-color: $colorWhite;
+    padding: 2rem;
+    margin: 0 0.5rem;
+    border-radius: 20px;
+    height: 100vh;
+    max-width: 100vw;
+  }
+}

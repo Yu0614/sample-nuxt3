@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  nuxt:
+    build:
+      context: .
+      dockerfile: container/nuxt/Dockerfile
+    ports:
+      - "3000:3000"
+      - "24678:24678" # nuxt
+    volumes:
+      - ./:/app
+    tty: true
+    working_dir: "/app"
+    environment:
+      - HOST=0.0.0.0
+      - port=3000
+      - CHOKIDAR_USEPOLLING=true
+    command: sh -c "yarn run dev"
