@@ -24,7 +24,7 @@
     ]
   },
   "dependencies": {
-    "nuxt": "3.0.0-rc.13"
+    "nuxt": "3.0.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^11.0.0",
